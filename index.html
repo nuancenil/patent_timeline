@@ -9,33 +9,63 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 20px;
+            margin: 40px; /* Adds padding around the entire page */
+            background-color: #f9f9f9; /* Light background for readability */
+            color: #333; /* Darker text for contrast */
         }
+
+        h1, h2 {
+            margin-bottom: 20px; /* Space below headings */
+            color: #1a1a1a; /* Slightly darker for emphasis */
+        }
+
+        .mermaid {
+            margin-bottom: 40px; /* Adds spacing below the timeline */
+            padding: 20px; /* Padding inside the timeline box */
+            background: #ffffff; /* White background for the timeline */
+            border: 1px solid #ddd; /* Border for distinction */
+            border-radius: 8px; /* Rounded corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+        }
+
         table {
             width: 100%;
             border-collapse: collapse;
             margin-top: 20px;
+            background: #ffffff; /* White background for the table */
+            border: 1px solid #ddd; /* Border for the table */
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
+
         th, td {
-            border: 1px solid #ddd;
-            padding: 8px;
-            text-align: left;
+            border: 1px solid #ddd; /* Inner borders */
+            padding: 12px; /* Padding for cells */
+            text-align: left; /* Align text to the left */
+            vertical-align: top; /* Top-align for readability */
         }
+
         th {
-            background-color: #f4f4f4;
+            background-color: #f4f4f4; /* Light gray background for headers */
+            color: #333; /* Darker text for headers */
+            font-weight: bold; /* Emphasis on headers */
         }
-        td {
-            text-align: center;
+
+        td a {
+            color: #1a73e8; /* Blue links for contrast */
+            text-decoration: none; /* No underline */
         }
-        a {
-            color: #1a73e8;
-            text-decoration: none;
+
+        td a:hover {
+            text-decoration: underline; /* Underline on hover */
         }
-        a:hover {
-            text-decoration: underline;
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9; /* Alternating row colors for readability */
         }
-        .mermaid {
-            margin-bottom: 20px;
+
+        tr:hover {
+            background-color: #f1f1f1; /* Highlight row on hover */
         }
     </style>
 </head>
