@@ -1,0 +1,210 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patent Dashboard</title>
+    <script type="module" src="https://unpkg.com/mermaid@10/dist/mermaid.esm.min.mjs"></script>
+    <style>
+        body {
+            font-family: 'Univers LT Std', 'Forum', 'Source Han Sans', Arial, sans-serif;
+            margin: 40px; /* Adds padding around the entire page */
+            background-color: #eeefef; /* Light background for readability */
+            color: #47423f; /* Darker text for contrast */
+        }
+
+        h1 {
+            font-family: 'Univers LT Std', 'Forum', 'Source Han Sans', Arial, sans-serif;
+            color: #47423f; /* Primary dark color */
+            font-size: 2.5em;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-family: 'Univers LT Std', 'Forum', 'Source Han Sans', Arial, sans-serif;
+            color: #d47854; /* Accent orange color */
+            font-size: 2em;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        h3 {
+            font-family: 'Univers LT Std', 'Forum', 'Source Han Sans', Arial, sans-serif;
+            color: #a09d95; /* Neutral beige */
+            font-size: 1.75em;
+            font-weight: normal;
+            margin-bottom: 15px;
+        }
+
+        h4, h5, h6 {
+            font-family: 'Univers LT Std', 'Forum', 'Source Han Sans', Arial, sans-serif;
+            color: #b6c6cf; /* Light gray-blue */
+            font-weight: normal;
+            font-size: 1.5em;
+        }
+
+        .mermaid {
+            margin-bottom: 40px; /* Adds spacing below the timeline */
+            padding: 20px; /* Padding inside the timeline box */
+            background: #ffffff; /* White background for the timeline */
+            border: 1px solid #b6c6cf; /* Border for distinction */
+            border-radius: 8px; /* Rounded corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background: #ffffff; /* White background for the table */
+            border: 1px solid #b6c6cf; /* Border for the table */
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        th, td {
+            border: 1px solid #b6c6cf; /* Inner borders */
+            padding: 12px; /* Padding for cells */
+            text-align: left; /* Align text to the left */
+            vertical-align: top; /* Top-align for readability */
+        }
+
+        th {
+            background-color: #a09d95; /* Header background */
+            color: #ffffff; /* White text for headers */
+            font-weight: bold; /* Emphasis on headers */
+        }
+
+        td a {
+            color: #d47854; /* Accent color for links */
+            text-decoration: none; /* No underline */
+        }
+
+        td a:hover {
+            text-decoration: underline; /* Underline on hover */
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9; /* Alternating row colors for readability */
+        }
+
+        tr:hover {
+            background-color: #b6c6cf; /* Highlight row on hover */
+        }
+
+        footer {
+            margin-top: 40px;
+            font-size: 0.9em;
+            color: #a09d95;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Patent Dashboard</h1>
+
+    <!-- Timeline -->
+    <h2>Timeline</h2>
+    <div class="mermaid">
+
+gantt
+    title Patent Expiry Timeline
+    dateFormat  YYYY-MM-DD
+    axisFormat  %Y
+    section Antibody
+        US1234567 :active, 2030-05-15, 3d
+        US2345678 :active, 2032-03-10, 3d
+        US5678901 :active, 2025-02-28, 3d
+    section Composition
+        EP3456789 :active, 2029-11-25, 3d
+        EP4567890 :active, 2028-07-15, 3d
+
+    </div>
+
+    <!-- Table -->
+    <h2>Patent Table</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Patent Number</th>
+                <th>Title</th>
+                <th>Category</th>
+                <th>Technology Tag</th>
+                <th>Efficacy Tag</th>
+                <th>Expiry Date</th>
+                <th>Link</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            <tr>
+                <td><a href="https://patents.google.com/patent/US1234567" target="_blank">US1234567</a></td>
+                <td>Anti-diabetic Composition</td>
+                <td>Antibody</td>
+                <td>Monoclonal Antibody</td>
+                <td>Diabetes Treatment</td>
+                <td>2030-05-15</td>
+                <td><a href="https://patents.google.com/patent/US1234567" target="_blank">View Details</a></td>
+            </tr>
+    
+            <tr>
+                <td><a href="https://patents.google.com/patent/US2345678" target="_blank">US2345678</a></td>
+                <td>Monoclonal Antibody Treatment</td>
+                <td>Antibody</td>
+                <td>Recombinant Technology</td>
+                <td>Immune Therapy</td>
+                <td>2032-03-10</td>
+                <td><a href="https://patents.google.com/patent/US2345678" target="_blank">View Details</a></td>
+            </tr>
+    
+            <tr>
+                <td><a href="https://patents.google.com/patent/EP3456789" target="_blank">EP3456789</a></td>
+                <td>GLP-1 Receptor Agonist</td>
+                <td>Composition</td>
+                <td>Peptide Synthesis</td>
+                <td>Weight Management</td>
+                <td>2029-11-25</td>
+                <td><a href="https://patents.google.com/patent/EP3456789" target="_blank">View Details</a></td>
+            </tr>
+    
+            <tr>
+                <td><a href="https://patents.google.com/patent/EP4567890" target="_blank">EP4567890</a></td>
+                <td>Small Molecule GLP-1 Agonist</td>
+                <td>Composition</td>
+                <td>Small Molecule Design</td>
+                <td>Appetite Suppression</td>
+                <td>2028-07-15</td>
+                <td><a href="https://patents.google.com/patent/EP4567890" target="_blank">View Details</a></td>
+            </tr>
+    
+            <tr>
+                <td><a href="https://patents.google.com/patent/US5678901" target="_blank">US5678901</a></td>
+                <td>Insulin Sensitivity Enhancer</td>
+                <td>Antibody</td>
+                <td>Protein Engineering</td>
+                <td>Insulin Regulation</td>
+                <td>2025-02-28</td>
+                <td><a href="https://patents.google.com/patent/US5678901" target="_blank">View Details</a></td>
+            </tr>
+    
+        </tbody>
+    </table>
+
+    <!-- Matrix -->
+    <h2>2-D Matrix: Technology vs. Efficacy</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Technology / Efficacy</th>
+<th>Appetite Suppression</th><th>Diabetes Treatment</th><th>Immune Therapy</th><th>Insulin Regulation</th><th>Weight Management</th></tr></thead><tbody><tr><td>Monoclonal Antibody</td><td>None</td><td><a href="https://patents.google.com/patent/US1234567" target="_blank">US1234567</a></td><td>None</td><td>None</td><td>None</td></tr><tr><td>Peptide Synthesis</td><td>None</td><td>None</td><td>None</td><td>None</td><td><a href="https://patents.google.com/patent/EP3456789" target="_blank">EP3456789</a></td></tr><tr><td>Protein Engineering</td><td>None</td><td>None</td><td>None</td><td><a href="https://patents.google.com/patent/US5678901" target="_blank">US5678901</a></td><td>None</td></tr><tr><td>Recombinant Technology</td><td>None</td><td>None</td><td><a href="https://patents.google.com/patent/US2345678" target="_blank">US2345678</a></td><td>None</td><td>None</td></tr><tr><td>Small Molecule Design</td><td><a href="https://patents.google.com/patent/EP4567890" target="_blank">EP4567890</a></td><td>None</td><td>None</td><td>None</td><td>None</td></tr>
+        </tbody>
+    </table>
+
+    <footer>
+        &copy; 2024 Eudaimonia IP Consulting. All rights reserved.
+    </footer>
+</body>
+</html>
